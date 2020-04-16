@@ -1,6 +1,14 @@
-<h4>Welcome to Server Manager 4.0</h4>
+<h4>Welcome to Server Manager</h4><h3>{{env}}</h3>
 <p>Manage your Servers and Users.</p>
 
-<button class="btn btn-primary" (click)="onLoadServer()">Load Server</button>
-
+<!--<button class="btn btn-primary" (click)="onLoadServer()">Load Server</button>-->
+<input type="text" #inp [(ngModel)]="envrn">&nbsp;
+<button class="btn btn-primary" (click)="updateEnv(inp)">Update Environment</button>
+<hr>
+<div class="col-sm-offset-1 col-md-offset-0">
+  <button class="btn btn-primary" (click)="login()">Login</button>&nbsp;
+  <button class="btn btn-primary" (click)="logout()">Logout</button>
+</div>
+<hr>
+<h1>{{status}}</h1>
 
